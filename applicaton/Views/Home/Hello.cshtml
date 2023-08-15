@@ -3,16 +3,33 @@
 @{
     ViewData["Title"] = "Hello";
 }
+@{
+    int num = Model.Item2;
+    if (num == 0){
+        num = 3;
+    }
+}
+@{
+    string name = Model.Item1;
+    if (name ==  null){
+    name = "Frank";
+}}
+
+<h1>@ViewData["Title"]</h1>
 <form>
   <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" value="John"><br>
+  <input type="text" id="name" name="name" value=@name><br>
   <label for="num">Number:</label><br>
-  <input type="text" id="num" name="num" value="2"><br><br>
-  <input type="submit" value="Submit">
+  <input type="text" id="num" name="num" value=@num><br><br>
+  <input type="submit" value="Greet">
 </form>
-<h1>@ViewData["Title"]</h1>
+<p>
+
+
+
+
+</p>
 @for (int i =0; i<Model.Item2; i++)
 {
-    <p>Hello @Model.Item1</p>
+    <p>Hello @Model.Item1!</p>
 }
-<p>What's up </p>
