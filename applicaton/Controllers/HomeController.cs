@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using applicaton.Models;
 using System.Text.Encodings.Web;
+using System.Runtime.CompilerServices;
 
 namespace applicaton.Controllers;
 
@@ -24,11 +25,17 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Hello(string name, int num){
+        return View((name, num));
+    }
+
 
     public IActionResult Login(string name, int num = 1){
         ViewData["name1"] = name;
         ViewData["num"] = num;
-        return View();
+        (string, int) a = (name, num);
+        Console.WriteLine(a.GetType());
+        return View(a);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

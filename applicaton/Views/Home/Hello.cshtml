@@ -1,0 +1,18 @@
+@model (string, int)
+
+@{
+    ViewData["Title"] = "Hello";
+}
+<form>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value="John"><br>
+  <label for="num">Number:</label><br>
+  <input type="text" id="num" name="num" value="2"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<h1>@ViewData["Title"]</h1>
+@for (int i =0; i<Model.Item2; i++)
+{
+    <p>Hello @Model.Item1</p>
+}
+<p>What's up </p>

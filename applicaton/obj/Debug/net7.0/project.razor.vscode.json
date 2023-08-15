@@ -24065,6 +24065,11 @@
       "FilePath": "/home/simon/softwareEngineering/waDotNet/applicaton/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/simon/softwareEngineering/waDotNet/applicaton/Views/Home/Hello.cshtml",
+      "TargetPath": "Views\\Home\\Hello.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
