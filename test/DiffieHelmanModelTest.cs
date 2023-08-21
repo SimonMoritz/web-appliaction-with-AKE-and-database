@@ -55,4 +55,12 @@ public class DiffieHelmanModelTest
         BigInteger bobKey = dh.ModularExponentiation(aliceSends, b);
         Assert.Equal(aliceKey, bobKey); //they should have the same encryption key now
     }
+
+    [Fact]
+    public void ShouldGiveRandomBytes(){
+        for (int i = 0; i < 10; i++){
+            Assert.True(dh.Random256BitNumber().GetBitLength() <= 256);
+            Assert.True(dh.Random256BitNumber() > -1);
+        }
+    }
 }
