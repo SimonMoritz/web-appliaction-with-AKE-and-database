@@ -53,6 +53,6 @@ public class DiffieHelmanModelTest
         BigInteger bobSends = dh.ModularExponentiation(dh.Generator, b);
         BigInteger aliceKey = dh.ModularExponentiation(bobSends, a);
         BigInteger bobKey = dh.ModularExponentiation(aliceSends, b);
-        Assert.Equal(aliceKey, bobKey);
+        Assert.Equal(aliceKey, bobKey); //they should have the same encryption key now
     }
 }
