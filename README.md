@@ -8,7 +8,7 @@ dotnet watch
 this will start the server at the localhost.
 
 ## Testing
-To run the unit testing go into the test folder and run:
+To run the automatic testing go into the test folder and run:
 ```
 dotnet test
 ```
