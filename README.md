@@ -1,4 +1,5 @@
 # website_using_database_mvc
+## Run Server
 
 To start the server download dotnet go into the applications folder and run:
 ```
