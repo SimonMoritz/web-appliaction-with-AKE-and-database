@@ -1,7 +1,7 @@
 # website_using_database_mvc
 ## Run Server
 
-To start the server download dotnet go into the applications folder and run:
+If not already done then download .NET 7. To start the server then go into the applications folder and run:
 ```
 dotnet watch
 ```
