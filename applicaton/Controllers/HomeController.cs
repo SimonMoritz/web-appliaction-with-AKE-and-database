@@ -46,7 +46,6 @@ public class HomeController : Controller
             Guid newID = Guid.NewGuid();
             string newIDString = newID.ToString();
             var result = CalcModularExpansionWithRandomB(newIDString);
-            Console.WriteLine(result.Item2);
             return View((result.Item1, newIDString));
         }
         if (clientKey == null){
@@ -59,7 +58,10 @@ public class HomeController : Controller
         if (username == null | password == null){
             return Error();
         }
-        Console.WriteLine(TempData[id]);
+        BigInteger b = BigInteger.Parse(TempData[id].ToString());
+        BigInteger clientKeyInt = BigInteger.Parse(clientKey);
+        BigInteger commonKey = dh.ModularExponentiation(clientKeyInt, b);
+        Console.WriteLine("common key is " + commonKey.ToString()); 
         return View("Login");
     }
 
