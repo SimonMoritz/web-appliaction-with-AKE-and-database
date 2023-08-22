@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
+      "Id": "/home/simon/softwareEngineering/waDotNet/applicaton/wwwroot/js/usercreation.js",
+      "PackagePath": "staticwebassets/js/usercreation.js"
+    },
+    {
       "Id": "/home/simon/softwareEngineering/waDotNet/applicaton/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },

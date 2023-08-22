@@ -5,6 +5,7 @@ using System.Numerics;
 using System.Text.Encodings.Web;
 using System.Runtime.CompilerServices;
 using System.Xml;
+using System.Net.WebSockets;
 
 namespace applicaton.Controllers;
 
@@ -33,31 +34,33 @@ public class HomeController : Controller
         return View((name, num));
     }
 
+    private (string, string) CalcModularExpansionWithRandomB(string id){
+        BigInteger b = dh.Random256BitNumber();
+        string serverExponent = b.ToString();
+        TempData[id] = serverExponent;
+        string calculation = dh.ModularExponentiation(dh.Generator, b).ToString();
+        return (calculation, serverExponent);
+    }
     public IActionResult CreateUser(string id, string username, string password, string clientKey){
         if (id == null){
             Guid newID = Guid.NewGuid();
-            BigInteger b = dh.Random256BitNumber();
-            string serverExponent = b.ToString();
             string newIDString = newID.ToString();
-            TempData[newIDString] = serverExponent;
-            string calculation = dh.ModularExponentiation(dh.Generator, b).ToString();
-            Console.WriteLine(serverExponent);
-            return View((calculation, newIDString));
+            var result = CalcModularExpansionWithRandomB(newIDString);
+            Console.WriteLine(result.Item2);
+            return View((result.Item1, newIDString));
         }
         if (clientKey == null){
-            string serverExponent;
             if (TempData.ContainsKey(id)){
-                serverExponent = TempData[id].ToString();
+                return View((TempData[id], id));
             } else {
-                serverExponent = "";
+                return View(("", id));
             }
-            return View((serverExponent, id));
         }
         if (username == null | password == null){
             return Error();
         }
         Console.WriteLine(TempData[id]);
-        return View("Hello");
+        return View("Login");
     }
 
 

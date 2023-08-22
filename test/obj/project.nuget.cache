@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QbeO+nQCcz6FQkkw4CQaj3z1hKxhaSqGG1Ze8/2oIkZtDUI88LvxA2yQXaqCdYt8i2+yGK+o+oOBO1NL9Nlo7Q==",
+  "dgSpecHash": "G6C634rf6nTzNFJC9c2FyhdrXDRm71YTFa3T/rjUMbZkT+b1THgzIp2x2R8b8iRuAy6StSOL94TVxB+wWrP3Uw==",
   "success": true,
   "projectFilePath": "/home/simon/softwareEngineering/waDotNet/test/test.csproj",
   "expectedPackageFiles": [
     "/home/simon/.nuget/packages/coverlet.collector/3.2.0/coverlet.collector.3.2.0.nupkg.sha512",
     "/home/simon/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",
+    "/home/simon/.nuget/packages/microsoft.identity.client/4.55.0/microsoft.identity.client.4.55.0.nupkg.sha512",
+    "/home/simon/.nuget/packages/microsoft.identitymodel.abstractions/6.22.0/microsoft.identitymodel.abstractions.6.22.0.nupkg.sha512",
     "/home/simon/.nuget/packages/microsoft.net.test.sdk/17.6.0/microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "/home/simon/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/home/simon/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",

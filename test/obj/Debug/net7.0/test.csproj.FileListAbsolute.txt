@@ -105,3 +105,5 @@
 /home/simon/softwareEngineering/waDotNet/test/bin/Debug/net7.0/applicaton
 /home/simon/softwareEngineering/waDotNet/test/bin/Debug/net7.0/applicaton.dll
 /home/simon/softwareEngineering/waDotNet/test/bin/Debug/net7.0/applicaton.pdb
+/home/simon/softwareEngineering/waDotNet/test/bin/Debug/net7.0/Microsoft.Identity.Client.dll
+/home/simon/softwareEngineering/waDotNet/test/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll

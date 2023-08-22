@@ -28,3 +28,7 @@
 /home/simon/softwareEngineering/waDotNet/applicaton/obj/Debug/net7.0/applicaton.pdb
 /home/simon/softwareEngineering/waDotNet/applicaton/obj/Debug/net7.0/applicaton.genruntimeconfig.cache
 /home/simon/softwareEngineering/waDotNet/applicaton/obj/Debug/net7.0/ref/applicaton.dll
+/home/simon/softwareEngineering/waDotNet/applicaton/bin/Debug/net7.0/Microsoft.Identity.Client.dll
+/home/simon/softwareEngineering/waDotNet/applicaton/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/home/simon/softwareEngineering/waDotNet/applicaton/obj/Debug/net7.0/applicaton.csproj.AssemblyReference.cache
+/home/simon/softwareEngineering/waDotNet/applicaton/obj/Debug/net7.0/applicaton.csproj.CopyComplete

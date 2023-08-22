@@ -1,0 +1,54 @@
+@model (string, string)
+
+@{
+    ViewData["Title"] = "Create User";
+}
+@{
+  string serverKey = Model.Item1;
+  string uid = Model.Item2;
+}
+<h1>@ViewData["Title"]</h1>
+<div>
+  <form method="post">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" value="1" class="toBeEncrypted"><br>
+    <label for="password">Password:</label><br>
+    <input type="text" id="password" name="password" value="2" class=toBeEncrypted><br><br>
+    <input type="submit" value="Create">
+    <label for="id" hidden>Password:</label>
+    <input hidden type ="text" id="id" name="id" value = @uid><br>
+    <input hidden type = "text" id="clientKey" name="clientKey" class="clientKey">
+  </form>
+</div>
+
+<div>
+  <p>     
+        
+  </p>
+</div>
+<div>
+  <h2>Diffie Helman Key Exchange</h2>
+  <p>To encrypt your username and password before sending it to the server, 
+    please do. 
+  <li>A key exchange </li> 
+  <li>An encryption</li>
+  
+  </p>
+  <div>
+
+  <label for="name"><b>g^a mod p</b> calculated with random <b>a</b>:<br>
+  <input type="text" id="name" name="name" value="1" class="clientKeyCalc"><br><br>
+  <label for="name"><b>g^b mod p</b> recieved from server<br>
+  <input type="text" id="name" name="name" value=@serverKey >
+  <input type="submit" value="Power by a"><br><br>
+  <label for="name">Common Encryption Key<br>
+  <input type="text" id="name" name="name" value="1">
+  <input type="submit" value="Encrypt username and password" class="encryptAction">
+
+</div>
+</div>
+
+
+@section scripts {
+  <script src = "~/js/usercreation.js"></script>
+}

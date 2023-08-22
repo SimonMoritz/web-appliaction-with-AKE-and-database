@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NIUOPQyjfXubAvyogaraowpRqzKGorw/I2lN/dpmL0E=",
+  "Hash": "QuEb8485Ry01xvE1+LTueN8jL0RO7nI3JWzptYbmga0=",
   "Source": "applicaton",
   "BasePath": "_content/applicaton",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/home/simon/softwareEngineering/waDotNet/applicaton/wwwroot/js/usercreation.js",
+      "SourceId": "applicaton",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/simon/softwareEngineering/waDotNet/applicaton/wwwroot/",
+      "BasePath": "_content/applicaton",
+      "RelativePath": "js/usercreation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/usercreation.js"
     },
     {
       "Identity": "/home/simon/softwareEngineering/waDotNet/applicaton/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
