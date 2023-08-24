@@ -6,12 +6,14 @@ using System.Text.Encodings.Web;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Net.WebSockets;
+using System.Text;
 
 namespace applicaton.Controllers;
 
 public class HomeController : Controller
 {
     private DiffieHelmanModel dh = new();
+    private AESModel aes = new();
     private Dictionary<string, BigInteger> serverExponents ;
     private readonly ILogger<HomeController> _logger;
 
@@ -41,6 +43,18 @@ public class HomeController : Controller
         string calculation = dh.ModularExponentiation(dh.Generator, b).ToString();
         return (calculation, serverExponent);
     }
+
+    private byte[] CheckCommonKey(BigInteger b){
+        byte[] bytes = b.ToByteArray();
+        if (bytes.Length > 256){
+            byte[] correctedBytes = new byte[256];
+            for (int i = 0; i<256; i++){
+                correctedBytes[i] = bytes[i];
+            }
+            return correctedBytes;
+        }
+        return bytes;
+    }
     public IActionResult CreateUser(string id, string username, string password, string clientKey){
         if (id == null){
             Guid newID = Guid.NewGuid();
@@ -60,8 +74,17 @@ public class HomeController : Controller
         }
         BigInteger b = BigInteger.Parse(TempData[id].ToString());
         BigInteger clientKeyInt = BigInteger.Parse(clientKey);
-        BigInteger commonKey = dh.ModularExponentiation(clientKeyInt, b);
-        Console.WriteLine("common key is " + commonKey.ToString()); 
+        BigInteger commonKey = dh.ModularExponentiation(clientKeyInt, b); 
+        byte[] commonKeyByte = CheckCommonKey(commonKey);
+        Console.WriteLine(commonKey.ToString());
+        Console.WriteLine("commonkey is " + string.Join(" ", commonKeyByte));
+        byte[] iv = Encoding.UTF8.GetBytes("simonmoritzjense");
+        Console.WriteLine(password);
+        byte[] secret = aes.ConvertHexToByte(password);
+        byte[] fakeKey = Encoding.UTF8.GetBytes("whatever");
+        Console.WriteLine("cipher is " + string.Join(" ", secret));
+        string decPassword = aes.DecryptStringFromBytes_Aes(secret, commonKeyByte, iv);
+        Console.WriteLine(decPassword);
         return View("Login");
     }
 
