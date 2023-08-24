@@ -11,9 +11,9 @@
 <div>
   <form method="post">
     <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" value="1" class="toBeEncrypted"><br>
+    <input type="text" id="username" name="username" value="1"><br>
     <label for="password">Password:</label><br>
-    <input type="text" id="password" name="password" value="2" class=toBeEncrypted><br><br>
+    <input type="text" id="password" name="password" value="2" class="toBeEncrypted"><br><br>
     <input type="submit" value="Create">
     <label for="id" hidden>Password:</label>
     <input hidden type ="text" id="id" name="id" value = @uid><br>
@@ -51,4 +51,5 @@
 
 @section scripts {
   <script src = "~/js/usercreation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
 }
