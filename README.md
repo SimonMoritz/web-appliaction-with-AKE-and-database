@@ -1,4 +1,4 @@
-# web appliaction with AKE and database
+# web application with AKE and database
 ## Run Server
 
 If not already done then download .NET 7. To start the server then go into the applications folder and run:
